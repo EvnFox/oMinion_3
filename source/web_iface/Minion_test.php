@@ -63,6 +63,23 @@ echo "Temperature reading: " . $output_temp . " C";
 <fieldset>
 <br>
 <form method='post' action=''>
+<input type='submit' name='oxygen' value='Test connected oxygen sensor' />
+</form>
+<br>
+<?php
+if(isset($_POST['oxygen'])){
+
+$command = escapeshellcmd('sudo python3 /home/pi/Documents/Minion_scripts/otest.py');
+$output_temp = shell_exec($command);
+echo "oxygen reading: " . $output_temp;
+
+}
+?>
+<br>
+</fieldset>
+<fieldset>
+<br>
+<form method='post' action=''>
 <input type='submit' name='GPS' value='Test connected Iridium GPS modem' />
 </form>
 <br>
