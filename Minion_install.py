@@ -207,6 +207,7 @@ os.system('sudo raspi-config nonint do_camera 0')
 os.system('sudo raspi-config nonint do_ssh 0')
 os.system('sudo raspi-config nonint do_i2c 0')
 os.system('sudo raspi-config nonint do_rgpio 0')
+
 # Add alias list to .bashrc
 os.system('sudo cat source/Minion_alias.txt >> /home/pi/.bashrc')
 #Create Driver Location
@@ -309,4 +310,4 @@ os.system('sudo cp source/web_iface/php.ini /etc/php/7.3/cli/')
 
 os.system('pip install matplotlib')
 # Reboot to finish kernel module config
-os.system('sudo shutdown now')
+#os.system('sudo shutdown now')

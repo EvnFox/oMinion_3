@@ -70,8 +70,8 @@ echo "Temperature reading: " . $output_temp . " C";
 if(isset($_POST['oxygen'])){
 
 $command = escapeshellcmd('sudo python3 /home/pi/Documents/Minion_scripts/otest.py');
-$output_temp = shell_exec($command);
-echo "oxygen reading: " . $output_temp;
+$output_oxygen = shell_exec($command);
+echo $output_oxygen;
 
 }
 ?>
